@@ -32,9 +32,10 @@
   background-image: linear-gradient(
     180deg,
     transparent,
-    rgba(37, 37, 37, 0.61),
+    rgba(37, 37, 37, 0.3),
     #111
   );
+  transform: translateY(0.5rem);
 }
 
 .banner-btn {
