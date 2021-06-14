@@ -7,6 +7,7 @@ const Banner = () => {
   const [movie, setMovie] = useState([]);
 
   useEffect(() => {
+    // fetch movies
     const fetchMovie = async () => {
       const movieRequest = await axios.get(requests.fetchNetflixOriginals);
       const movieData = movieRequest.data.results;
@@ -19,8 +20,7 @@ const Banner = () => {
     fetchMovie();
   }, []);
 
-  console.log(movie);
-
+  // truncate text
   function truncText(str, n) {
     return str?.length > n ? `${str.substr(0, n - 1)}...` : str;
   }
