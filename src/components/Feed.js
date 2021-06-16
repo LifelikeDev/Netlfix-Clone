@@ -16,7 +16,7 @@ const Feed = () => {
       <EachRow title="Comedy Movies" fetchURL={requests.fetchComedyMovies} />
       <EachRow title="Horror Movies" fetchURL={requests.fetchHorrorMovies} />
       <EachRow title="Romance Movies" fetchURL={requests.fetchRomanceMovies} />
-      <EachRow title="Documentaries" fetchURL={requests.fetchDocumentaries} />
+      <EachRow title="Sci-Fi Movies" fetchURL={requests.fetchSciFiMovies} />
     </section>
   );
 };

@@ -6,5 +6,3 @@ const firebaseConfig = {
   messagingSenderId: "79194712475",
   appId: "1:79194712475:web:edbc40d22c200ecd4b993e",
 };
-
-// npm install -g firebase-tools
