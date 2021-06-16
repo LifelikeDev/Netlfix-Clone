@@ -15,7 +15,8 @@
 .banner-title {
   font-size: 3rem;
   font-weight: 800;
-  padding-bottom: 0.3rem;
+  line-height: 1.2;
+  padding-bottom: 1rem;
 }
 
 .banner-description {
@@ -54,4 +55,15 @@
   background-color: #e6e6e6;
   color: #000;
   transition: all 0.2s;
+}
+
+@media screen and (max-width: 768px) {
+  .banner-title {
+    font-size: 2.5rem;
+    padding-right: 0.3rem;
+  }
+
+  .banner-description {
+    max-width: 300px;
+  }
 }

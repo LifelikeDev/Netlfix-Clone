@@ -4,7 +4,7 @@ import "./Feed.css";
 
 const Feed = () => {
   return (
-    <section className="feed" style={{ color: "#eee" }}>
+    <section className="feed">
       <EachRow
         title="Netflix Originals"
         fetchURL={requests.fetchNetflixOriginals}

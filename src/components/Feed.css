@@ -1,0 +1,10 @@
+.feed {
+  color: #eee;
+  padding-top: 1.5rem;
+}
+
+@media screen and (max-width: 768px) {
+  .feed {
+    padding-top: 0.5rem;
+  }
+}

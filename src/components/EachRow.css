@@ -36,3 +36,12 @@
   opacity: 1;
   transform: scale(1.09);
 }
+
+@media screen and (max-width: 768px) {
+  .movie-poster:hover,
+  .movie-poster:active,
+  .movie-poster.large:hover,
+  .movie-poster.large:active {
+    transform: none;
+  }
+}

@@ -13,9 +13,10 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  width: 100%;
+  min-width: 390px;
 }
 
 .app {
   background-color: #111;
-  width: 100%;
 }
