@@ -1,3 +1,9 @@
+:root {
+  --btn-color: #ef0914;
+  --border-none: none;
+  --white: #fff;
+}
+
 .loginScreen {
   background-image: url("../images/ntflx-login-bg.jpg");
   background-repeat: no-repeat;
@@ -18,10 +24,10 @@
 }
 
 .signIn-btn {
-  background-color: #ef0914;
-  border: none;
+  background-color: var(--btn-color);
+  border: var(--border-none);
   border-radius: 4px;
-  color: #fff;
+  color: var(--white);
   cursor: pointer;
   font-size: 16px;
   font-weight: 500;
@@ -44,4 +50,69 @@
   height: 100vh;
   width: 100%;
   z-index: 1;
+}
+
+.loginScreen-body {
+  color: var(--white);
+  z-index: 1;
+  position: absolute;
+  top: 32%;
+  /* border: 1px solid yellow; */
+  width: 100%;
+}
+
+.loginScreen-body > * {
+  max-width: 650px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 0 30px;
+}
+
+.loginScreen-body .main-text {
+  font-size: 3.25rem;
+  font-weight: 600;
+  line-height: 1.1;
+  margin-bottom: 15px;
+}
+
+.loginScreen-body .sub-text {
+  font-size: 1.6rem;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+
+.loginScreen-body .cta__sub-text {
+  font-weight: 400;
+  font-size: 1.15rem;
+  margin-bottom: 15px;
+}
+
+.cta-form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.email {
+  border: var(--border-none);
+  padding: 13px 10px;
+  width: 400px;
+  outline-width: 0;
+  height: 30px;
+}
+
+.email::placeholder {
+  font-size: 15px;
+}
+
+.cta-started {
+  background-color: var(--btn-color);
+  border: var(--border-none);
+  color: var(--white);
+  cursor: pointer;
+  font-size: 1.4rem;
+  padding: 10px 26px;
+  height: 56px;
+  margin-left: 1px;
+  text-align: center;
 }
