@@ -1,6 +1,7 @@
 import { useState } from "react";
 import SignInField from "../components/SignInField";
 import "./LoginScreen.css";
+import { AiOutlineRight } from "react-icons/ai";
 
 const LoginScreen = () => {
   const [signedIn, setSignedIn] = useState(false);
@@ -31,10 +32,12 @@ const LoginScreen = () => {
         <div className="gradient-layer" />
       </div>
 
-      <section className="loginScreen-body">
-        {signedIn ? (
+      {signedIn ? (
+        <section className="loginScreen-body signIn">
           <SignInField />
-        ) : (
+        </section>
+      ) : (
+        <section className="loginScreen-body">
           <div>
             <h1 className="main-text">Unlimited movies, TV shows, and more.</h1>
             <h2 className="sub-text">Watch anywhere. Cancel anytime.</h2>
@@ -50,12 +53,12 @@ const LoginScreen = () => {
                 placeholder="Email address"
               />
               <button className="cta-started" onClick={handleSignIn}>
-                Get Started &rarr;
+                Get Started <AiOutlineRight className="arrow-right" />
               </button>
             </form>
           </div>
-        )}
-      </section>
+        </section>
+      )}
     </header>
   );
 };
