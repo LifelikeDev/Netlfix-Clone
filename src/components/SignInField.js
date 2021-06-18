@@ -1,22 +1,96 @@
 import "./SignInField.css";
 import { IoCheckbox } from "react-icons/io5";
+import { useState, useRef } from "react";
+import { auth } from "../firebase";
 
 const SignInField = () => {
+  const fullNameRef = useRef("");
+  const emailRef = useRef("");
+  const passwordRef = useRef("");
+  const confirmPasswordRef = useRef("");
+
+  const [signUpMode, setSignUpMode] = useState(false);
+
+  function signUp(e) {
+    e.preventDefault();
+
+    setSignUpMode(true);
+
+    auth
+      .createUserWithEmailAndPassword(
+        emailRef.current.value,
+        passwordRef.current.value
+      )
+      .then((authUser) => {
+        console.log(authUser);
+      })
+      .catch((error) => {
+        alert(error.message);
+      });
+  }
+
+  function signIn(e) {
+    e.preventDefault();
+
+    auth
+      .signInWithEmailAndPassword(
+        emailRef.current.value,
+        passwordRef.current.value
+      )
+      .then((authUser) => {
+        console.log(authUser);
+      })
+      .catch((error) => {
+        alert(error.message);
+      });
+  }
+
   return (
     <div className="signInField">
       <form className="signIn-form">
-        <h2 className="signIn-header"> Sign In </h2>
+        <h2 className="signIn-header">
+          {" "}
+          {signUpMode ? `Sign Up` : `Sign In`}{" "}
+        </h2>
+
+        {signUpMode && (
+          <input
+            type="text"
+            className="regular-input"
+            placeholder="Full Name"
+            ref={fullNameRef}
+          />
+        )}
         <input
           type="email"
-          className="email-input"
+          className="regular-input"
           placeholder="Email or phone number"
+          ref={emailRef}
         />
         <input
           type="password"
-          className="password-input"
+          className={`${signUpMode ? "regular-input" : "last-input"}`}
           placeholder="Password"
+          ref={passwordRef}
         />
-        <button type="submit">Sign In</button>
+        {signUpMode && (
+          <input
+            type="password"
+            className="last-input"
+            placeholder="Confirm Password"
+            ref={confirmPasswordRef}
+          />
+        )}
+
+        {signUpMode ? (
+          <button type="submit" onClick={signUp}>
+            Sign Up
+          </button>
+        ) : (
+          <button type="submit" onClick={signIn}>
+            Sign In
+          </button>
+        )}
 
         <div className="help-text">
           <p>
@@ -25,9 +99,17 @@ const SignInField = () => {
           <p>Need help?</p>
         </div>
 
-        <p className="signUp-text">
-          New to Netflix? <span>Sign up now</span>
-        </p>
+        {signUpMode ? (
+          <p className="signUser-text">
+            Already a user?{" "}
+            <span onClick={() => setSignUpMode(false)}>Sign in</span>
+          </p>
+        ) : (
+          <p className="signUser-text">
+            New to Netflix?{" "}
+            <span onClick={() => setSignUpMode(true)}>Sign up now</span>
+          </p>
+        )}
       </form>
     </div>
   );

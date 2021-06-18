@@ -43,11 +43,11 @@
   font-size: 16px;
 }
 
-.email-input {
+.regular-input {
   margin-bottom: 14px;
 }
 
-.password-input {
+.last-input {
   margin-bottom: 40px;
 }
 
@@ -87,16 +87,16 @@
   text-decoration: underline;
 }
 
-.signUp-text {
+.signUser-text {
   color: #ffffff8e;
   text-align: left;
 }
 
-.signUp-text span {
+.signUser-text span {
   color: #fff;
   cursor: pointer;
 }
 
-.signUp-text span:hover {
+.signUser-text span:hover {
   text-decoration: underline;
 }
