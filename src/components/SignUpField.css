@@ -1,0 +1,58 @@
+.loginScreen-body .main-text {
+  font-size: 3.25rem;
+  font-weight: 600;
+  line-height: 1.1;
+  margin-bottom: 15px;
+}
+
+.loginScreen-body .sub-text {
+  font-size: 1.6rem;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+
+.loginScreen-body .cta__sub-text {
+  font-weight: 400;
+  font-size: 1.15rem;
+  margin-bottom: 15px;
+}
+
+.cta-form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.email {
+  border: var(--border-none);
+  padding: 13px 10px;
+  width: 400px;
+  outline-width: 0;
+  height: 30px;
+}
+
+.email::placeholder {
+  font-size: 15px;
+}
+
+.cta-started {
+  display: flex;
+  align-items: center;
+  background-color: var(--btn-color);
+  border: var(--border-none);
+  color: var(--white);
+  cursor: pointer;
+  font-size: 1.4rem;
+  padding: 10px 26px;
+  height: 56px;
+  margin-left: 1px;
+  text-align: center;
+}
+
+.cta-started span {
+  margin-right: 4px;
+}
+
+.cta-started .arrow-right {
+  margin-left: 4px;
+}

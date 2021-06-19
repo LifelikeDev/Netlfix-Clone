@@ -7,7 +7,7 @@
 .loginScreen {
   background-image: url("../images/ntflx-login-bg.jpg");
   background-repeat: repeat-y;
-  background-size: cover;
+  background-size: fill;
   background-position: center;
   color: #eee;
   min-height: 100%;
@@ -47,7 +47,8 @@
     rgba(0, 0, 0, 0) 60%,
     rgba(0, 0, 0, 0.8) 100%
   );
-  height: 100vh;
+  min-height: 100vh;
+  /* padding-bottom: 120px; */
   width: 100%;
   z-index: 1;
 }
@@ -56,7 +57,7 @@
   color: var(--white);
   z-index: 1;
   position: absolute;
-  top: 32%;
+  top: 230px;
   /* border: 1px solid yellow; */
   width: 100%;
 }
@@ -70,63 +71,4 @@
   margin: 0 auto;
   text-align: center;
   padding: 0 30px;
-}
-
-.loginScreen-body .main-text {
-  font-size: 3.25rem;
-  font-weight: 600;
-  line-height: 1.1;
-  margin-bottom: 15px;
-}
-
-.loginScreen-body .sub-text {
-  font-size: 1.6rem;
-  font-weight: 400;
-  margin-bottom: 20px;
-}
-
-.loginScreen-body .cta__sub-text {
-  font-weight: 400;
-  font-size: 1.15rem;
-  margin-bottom: 15px;
-}
-
-.cta-form {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.email {
-  border: var(--border-none);
-  padding: 13px 10px;
-  width: 400px;
-  outline-width: 0;
-  height: 30px;
-}
-
-.email::placeholder {
-  font-size: 15px;
-}
-
-.cta-started {
-  display: flex;
-  align-items: center;
-  background-color: var(--btn-color);
-  border: var(--border-none);
-  color: var(--white);
-  cursor: pointer;
-  font-size: 1.4rem;
-  padding: 10px 26px;
-  height: 56px;
-  margin-left: 1px;
-  text-align: center;
-}
-
-.cta-started span {
-  margin-right: 4px;
-}
-
-.cta-started .arrow-right {
-  margin-left: 4px;
 }
