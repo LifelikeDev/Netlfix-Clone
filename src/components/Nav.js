@@ -1,8 +1,10 @@
 import { useState, useEffect } from "react";
+import { useHistory } from "react-router";
 import "./Nav.css";
 
 const Nav = () => {
   const [animateNav, setAnimateNav] = useState(false);
+  const history = useHistory();
 
   // handle navbar animation
   const handleNavAnimation = () => {
@@ -25,12 +27,14 @@ const Nav = () => {
           src="images/netflix-logo.png"
           alt="netflix logo"
           className="nav-logo"
+          onClick={() => history.push("/")}
         />
 
         <img
           src="/images/nav-avatar.png"
           alt="user avatar"
           className="nav-avatar"
+          onClick={() => history.push("/profile")}
         />
       </div>
     </nav>

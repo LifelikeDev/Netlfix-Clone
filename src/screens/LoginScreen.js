@@ -1,10 +1,12 @@
 import { useState } from "react";
+import { useHistory } from "react-router";
 import SignInField from "../components/SignInField";
 import SignUpField from "../components/SignUpField";
 import "./LoginScreen.css";
 
 const LoginScreen = () => {
   const [signedIn, setSignedIn] = useState(false);
+  const history = useHistory();
 
   function handleSignIn(e) {
     e.preventDefault();
@@ -20,6 +22,7 @@ const LoginScreen = () => {
             className="nav-logo"
             src="/images/netflix-logo-2.png"
             alt="netflix"
+            onClick={() => history.push("/")}
           />
         </div>
 

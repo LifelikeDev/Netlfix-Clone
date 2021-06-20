@@ -24,14 +24,14 @@ function App() {
         );
       } else {
         // invoke the logout function from userSlice
-        dispatch(logout);
+        dispatch(logout());
       }
     });
 
     return () => {
       unsubscribe();
     };
-  }, []);
+  }, [dispatch]);
 
   return (
     <div className="app">

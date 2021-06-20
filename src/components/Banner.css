@@ -51,6 +51,11 @@
   outline: none;
 }
 
+.banner-btn:first-of-type {
+  background-color: #e6e6e6;
+  color: #000;
+}
+
 .banner-btn:hover {
   background-color: #e6e6e6;
   color: #000;

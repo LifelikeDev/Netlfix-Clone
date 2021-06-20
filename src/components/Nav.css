@@ -19,7 +19,7 @@
 .nav-logo {
   cursor: pointer;
   object-fit: contain;
-  /* padding: 0 0 0 20px; */
+  /* padding-left: clamp(10px, 10px, 0); */
   position: fixed;
   top: 0;
   left: 0;
@@ -29,6 +29,6 @@
 .nav-avatar {
   cursor: pointer;
   position: fixed;
-  right: 20px;
+  right: 30px;
   width: 30px;
 }
