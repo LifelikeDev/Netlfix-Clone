@@ -10,7 +10,7 @@ const ProfileScreen = () => {
 
   return (
     <section className="profileScreen">
-      <Nav />
+      <Nav scrollHeight={50} />
 
       <div className="profileScreen-body">
         <h2>Edit Profile</h2>

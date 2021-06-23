@@ -2,13 +2,13 @@ import { useState, useEffect } from "react";
 import { useHistory } from "react-router";
 import "./Nav.css";
 
-const Nav = () => {
+const Nav = ({ scrollHeight }) => {
   const [animateNav, setAnimateNav] = useState(false);
   const history = useHistory();
 
   // handle navbar animation
   const handleNavAnimation = () => {
-    if (window.scrollY > 100) {
+    if (window.scrollY > scrollHeight) {
       setAnimateNav(true);
     } else {
       setAnimateNav(false);
@@ -22,14 +22,16 @@ const Nav = () => {
 
   return (
     <nav className={`nav ${animateNav && "nav__black"}`}>
-      <div className="nav-contents">
+      <div>
         <img
           src="images/netflix-logo.png"
           alt="netflix logo"
           className="nav-logo"
           onClick={() => history.push("/")}
         />
+      </div>
 
+      <div>
         <img
           src="/images/nav-avatar.png"
           alt="user avatar"

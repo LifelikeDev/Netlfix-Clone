@@ -1,34 +1,39 @@
 .nav {
-  height: 30px;
-  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  height: 50px;
+  padding: 20px 0 10px;
   position: fixed;
   top: 0;
+  left: 0;
+  right: 0;
   transition: all 0.5s ease-in;
   width: 100%;
   z-index: 1;
 }
 
 .nav__black {
-  background-color: #222;
+  background-color: hsl(0, 0%, 10%);
 }
+
 .nav-contents {
-  display: flex;
-  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  outline: 1px solid lightgreen;
 }
 
 .nav-logo {
   cursor: pointer;
   object-fit: contain;
-  /* padding-left: clamp(10px, 10px, 0); */
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 120px;
+  transform: translateY(-24px);
+  width: 7.5rem;
 }
 
 .nav-avatar {
   cursor: pointer;
-  position: fixed;
-  right: 30px;
-  width: 30px;
+  height: 2.25rem;
+  padding-right: 1.25rem;
+  width: 2.4rem;
 }
