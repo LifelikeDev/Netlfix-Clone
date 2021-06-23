@@ -1,21 +1,41 @@
 import "./Footer.css";
 
 const Footer = () => {
+  const links = [
+    ["FAQ", "Investor Relations", "Privacy", "Speed Test"],
+    ["Help Center", "Jobs", "Cookie Preferences", "Legal Notices"],
+    ["Account", "Ways to Watch", "Corporate Information", "Netflix Originals"],
+    ["Media Center", "Terms of Use", "Contact Us"],
+  ];
+
   return (
-    <footer className="footer">
-      <blockquote>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro numquam,
-        harum quas vero provident labore assumenda velit minus ad animi commodi
-        nobis cum hic quasi cupiditate sint eligendi aliquam inventore?
-        Praesentium similique iusto quo impedit inventore, odit, dolorem dolore
-        aliquam culpa cum perspiciatis nobis nisi ab amet reprehenderit, earum
-        sequi libero. Ducimus ipsa atque harum. Quae error omnis blanditiis
-        minima quo asperiores aperiam, velit, labore minus facere iusto illo
-        ducimus dolore quaerat rerum doloribus similique maiores, quod vel
-        deleniti a fuga ea. Recusandae maxime cumque autem atque dolor minima,
-        ab consectetur quod omnis harum quos neque totam beatae veritatis
-        exercitationem.
-      </blockquote>
+    <footer className="footer-main">
+      <div className="footer">
+        <p className="lead-text">Questions? Contact us.</p>
+        <nav className="footer-grid">
+          <ul>
+            {links[0].map((link, idx) => (
+              <li key={idx}>{link}</li>
+            ))}
+          </ul>
+          <ul>
+            {links[1].map((link, idx) => (
+              <li key={idx}>{link}</li>
+            ))}
+          </ul>
+          <ul>
+            {links[2].map((link, idx) => (
+              <li key={idx}>{link}</li>
+            ))}
+          </ul>
+          <ul>
+            {links[3].map((link, idx) => (
+              <li key={idx}>{link}</li>
+            ))}
+          </ul>
+        </nav>
+        <p className="company-name">Netflix</p>
+      </div>
     </footer>
   );
 };
