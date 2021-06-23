@@ -1,0 +1,29 @@
+.single-plan {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 14px;
+}
+
+.plan-name h3 {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.plan-name p {
+  font-size: 13px;
+}
+
+.subscribe-button {
+  background-color: #e50914;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 8px 12px;
+}
+
+.subscribe-button:hover {
+  filter: saturate(85%);
+}

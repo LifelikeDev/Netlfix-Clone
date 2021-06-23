@@ -3,6 +3,7 @@ import { selectUser } from "../features/userSlice";
 import Nav from "../components/Nav";
 import "./ProfileScreen.css";
 import { auth } from "../firebase";
+import IndividualPlan from "../components/IndividualPlan";
 
 const ProfileScreen = () => {
   const user = useSelector(selectUser);
@@ -10,6 +11,7 @@ const ProfileScreen = () => {
   return (
     <section className="profileScreen">
       <Nav />
+
       <div className="profileScreen-body">
         <h2>Edit Profile</h2>
         <div className="user-information">
@@ -20,6 +22,14 @@ const ProfileScreen = () => {
 
             <div className="plans">
               <h3 className="user-plan">Plans</h3>
+
+              <p className="renewal-date">Renewal date: 23/06/22</p>
+
+              <div className="individual-plans">
+                <IndividualPlan name="Netflix Standard" quality="1080p" />
+                <IndividualPlan name="Netflix Basic" quality="480p" />
+                <IndividualPlan name="Netflix Premium" quality="4K + HDR" />
+              </div>
 
               <button className="user-signOut" onClick={() => auth.signOut()}>
                 Sign Out

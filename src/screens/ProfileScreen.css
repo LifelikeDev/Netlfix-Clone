@@ -13,7 +13,7 @@
 
 .profileScreen-body h2 {
   border-bottom: 1px solid #282c2d;
-  font-size: 52px;
+  font-size: 46px;
   font-weight: 400;
   margin-bottom: 20px;
 }
@@ -33,8 +33,8 @@
 
 .user-email {
   background-color: #808080;
-  font: 15px;
-  padding: 15px 15px 15px 20px;
+  font: 14px;
+  padding: 14px 14px 14px 18px;
 }
 
 .plans {
@@ -44,6 +44,10 @@
 .user-plan {
   border-bottom: 1px solid #282c2d;
   padding-bottom: 10px;
+}
+
+.renewal-date {
+  margin: 10px 0 25px;
 }
 
 .user-signOut {
@@ -56,4 +60,12 @@
   padding: 10px 20px;
   margin-top: 5%;
   width: 100%;
+}
+
+.individual-plans {
+  padding: 0 8px;
+}
+
+.user-signOut:hover {
+  filter: saturate(85%);
 }
