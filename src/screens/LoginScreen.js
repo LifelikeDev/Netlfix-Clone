@@ -31,11 +31,6 @@ const LoginScreen = () => {
             Sign In
           </button>
         )}
-
-        <div
-          className="gradient-layer"
-          style={{ paddingBottom: `${signedIn ? "120px" : "60px"}` }}
-        />
       </div>
 
       {signedIn ? (

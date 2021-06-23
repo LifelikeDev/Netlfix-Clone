@@ -62,6 +62,10 @@
   margin-bottom: 10px;
 }
 
+.signIn-form button:hover {
+  filter: saturate(85%);
+}
+
 .help-text {
   /* color: #5c5858; */
   color: #ffffff8e;

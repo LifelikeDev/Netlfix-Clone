@@ -10,17 +10,19 @@
   background-size: cover;
   background-position: center;
   color: #eee;
+  height: 100vh;
   min-height: 100%;
   position: relative;
 }
 
 .nav-logo {
   position: fixed;
+  top: 1.38rem;
   left: 0;
   object-fit: contain;
   margin-left: 1%;
-  /* width: clamp(12%, 120px, 28%); */
-  width: 150px;
+  width: 9.4rem;
+  z-index: 1;
 }
 
 .signIn-btn {
@@ -31,15 +33,21 @@
   cursor: pointer;
   font-size: 16px;
   font-weight: 500;
-  margin-right: 5%;
   outline: none;
   padding: 9px 16px;
   position: fixed;
   right: 0;
-  top: 25px;
+  top: 1.56rem;
+  right: 1.56rem;
+  z-index: 1;
 }
 
-.gradient-layer {
+.signIn-btn:hover {
+  filter: saturate(85%);
+}
+
+.loginScreen::after {
+  content: "";
   background-color: rgba(0, 0, 0, 0.4);
   background-image: linear-gradient(
     to top,
@@ -47,10 +55,13 @@
     rgba(0, 0, 0, 0) 60%,
     rgba(0, 0, 0, 0.8) 100%
   );
-  min-height: 100vh;
-  /* padding-bottom: 120px; */
+  height: 100vh;
+  min-height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  position: absolute;
   width: 100%;
-  z-index: 1;
 }
 
 .loginScreen-body {
@@ -58,7 +69,6 @@
   z-index: 1;
   position: absolute;
   top: 230px;
-  /* border: 1px solid yellow; */
   width: 100%;
 }
 
@@ -70,5 +80,14 @@
   max-width: 650px;
   margin: 0 auto;
   text-align: center;
-  padding: 0 30px;
+  padding: 0 8.2rem;
+}
+
+@media screen and (max-width: 769px) {
+  .loginScreen-body {
+    top: 10.45rem;
+  }
+  .loginScreen-body > * {
+    padding: 0 2.9rem;
+  }
 }

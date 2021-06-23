@@ -49,10 +49,20 @@
   text-align: center;
 }
 
+.cta-started:hover {
+  filter: saturate(85%);
+}
+
 .cta-started span {
   margin-right: 4px;
 }
 
 .cta-started .arrow-right {
   margin-left: 4px;
+}
+
+@media screen and (max-width: 550px) {
+  .loginScreen-body .main-text {
+    font-size: 2.9rem;
+  }
 }
