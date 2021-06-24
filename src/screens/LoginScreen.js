@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useHistory } from "react-router";
 import SignInField from "../components/SignInField";
-import SignUpField from "../components/SignUpField";
+import GetStarted from "../components/GetStarted";
 import "./LoginScreen.css";
 
 const LoginScreen = () => {
@@ -39,7 +39,7 @@ const LoginScreen = () => {
         </section>
       ) : (
         <section className="loginScreen-body">
-          <SignUpField handleSignIn={handleSignIn} />
+          <GetStarted handleSignIn={handleSignIn} />
         </section>
       )}
     </header>

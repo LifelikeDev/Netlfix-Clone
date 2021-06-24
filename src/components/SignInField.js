@@ -4,10 +4,8 @@ import { useState, useRef } from "react";
 import { auth } from "../firebase";
 
 const SignInField = () => {
-  const fullNameRef = useRef("");
   const emailRef = useRef("");
   const passwordRef = useRef("");
-  const confirmPasswordRef = useRef("");
 
   const [signUpMode, setSignUpMode] = useState(false);
 
@@ -53,18 +51,10 @@ const SignInField = () => {
           {signUpMode ? `Sign Up` : `Sign In`}{" "}
         </h2>
 
-        {signUpMode && (
-          <input
-            type="text"
-            className="regular-input"
-            placeholder="Full Name"
-            ref={fullNameRef}
-          />
-        )}
         <input
           type="email"
           className="regular-input"
-          placeholder="Email or phone number"
+          placeholder="Email "
           ref={emailRef}
         />
         <input
@@ -73,14 +63,6 @@ const SignInField = () => {
           placeholder="Password"
           ref={passwordRef}
         />
-        {signUpMode && (
-          <input
-            type="password"
-            className="last-input"
-            placeholder="Confirm Password"
-            ref={confirmPasswordRef}
-          />
-        )}
 
         {signUpMode ? (
           <button type="submit" onClick={signUp}>

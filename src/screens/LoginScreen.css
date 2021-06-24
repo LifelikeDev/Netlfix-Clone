@@ -16,9 +16,9 @@
 }
 
 .nav-logo {
-  position: fixed;
+  /* position: fixed;
   top: 1.38rem;
-  left: 0;
+  left: 0; */
   object-fit: contain;
   margin-left: 1%;
   width: 9.4rem;
@@ -35,10 +35,10 @@
   font-weight: 500;
   outline: none;
   padding: 9px 16px;
-  position: fixed;
+  /* position: fixed;
   right: 0;
   top: 1.56rem;
-  right: 1.56rem;
+  right: 1.56rem; */
   z-index: 1;
 }
 
@@ -89,5 +89,16 @@
   }
   .loginScreen-body > * {
     padding: 0 2.9rem;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .nav-logo {
+    top: 1.65rem;
+    width: 8.2rem;
+  }
+
+  .loginScreen-body > .signInField {
+    padding: 0 1.2rem;
   }
 }

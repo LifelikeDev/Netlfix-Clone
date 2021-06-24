@@ -104,3 +104,13 @@
 .signUser-text span:hover {
   text-decoration: underline;
 }
+
+@media screen and (max-width: 550px) {
+  .signInField {
+    width: 70%;
+  }
+
+  .signIn-form {
+    padding: 50px 5% 70px;
+  }
+}

@@ -34,7 +34,9 @@ const Footer = () => {
             ))}
           </ul>
         </nav>
-        <p className="company-name">Netflix</p>
+        <p className="company-name">
+          Netflix &copy; {new Date().getFullYear()} <small>Navian</small>
+        </p>
       </div>
     </footer>
   );
