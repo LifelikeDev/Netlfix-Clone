@@ -1,12 +1,12 @@
 .footer__main {
   background-color: #000;
-  color: #999;
+  color: #777;
   padding: 4rem 0 1.8rem;
 }
 
 .footer {
   margin: 0 auto;
-  width: 85%;
+  width: 65%;
   /* outline: 1px solid yellow; */
 }
 
@@ -51,6 +51,10 @@
   word-wrap: break-word;
 }
 
+.company-name {
+  font-size: 14px;
+}
+
 .lead-text:hover,
 .footer__grid li:hover {
   text-decoration: underline;
@@ -61,7 +65,7 @@
     grid-template-areas:
       "list1 list3"
       "list2 list4";
-    column-gap: 2rem;
+    column-gap: 3rem;
   }
 
   .footer__grid li {
