@@ -1,4 +1,4 @@
-.footer-main {
+.footer__main {
   background-color: #000;
   color: #999;
   padding: 4rem 0 1.8rem;
@@ -16,7 +16,7 @@
   margin-bottom: 2rem;
 }
 
-.footer-grid {
+.footer__grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-areas: "list1 list2 list3 list4";
@@ -24,27 +24,27 @@
   gap: 0.8rem;
 }
 
-.footer-grid ul {
+.footer__grid ul {
   grid-area: list;
   list-style-type: none;
 }
 
-.footer-grid ul:first-of-type {
+.footer__grid ul:first-of-type {
   grid-area: list1;
 }
 
-.footer-grid ul:nth-of-type(2) {
+.footer__grid ul:nth-of-type(2) {
   grid-area: list2;
 }
 
-.footer-grid ul:nth-of-type(3) {
+.footer__grid ul:nth-of-type(3) {
   grid-area: list3;
 }
-.footer-grid ul:last-of-type {
+.footer__grid ul:last-of-type {
   grid-area: list4;
 }
 
-.footer-grid li {
+.footer__grid li {
   cursor: pointer;
   font-size: 13px;
   margin-bottom: 0.9rem;
@@ -52,27 +52,23 @@
 }
 
 .lead-text:hover,
-.footer-grid li:hover {
+.footer__grid li:hover {
   text-decoration: underline;
 }
 
 @media screen and (max-width: 550px) {
-  /* .footer {
-    width: 100%;
-  } */
-
-  .footer-grid {
+  .footer__grid {
     grid-template-areas:
       "list1 list3"
       "list2 list4";
     column-gap: 2rem;
   }
 
-  .footer-grid li {
+  .footer__grid li {
     word-break: keep-all;
     width: 8rem;
   }
-  .footer-grid ul > li:last-of-type {
+  .footer__grid ul > li:last-of-type {
     margin-bottom: 0;
   }
 }

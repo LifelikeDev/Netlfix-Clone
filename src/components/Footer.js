@@ -9,10 +9,10 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="footer-main">
+    <footer className="footer__main">
       <div className="footer">
         <p className="lead-text">Questions? Contact us.</p>
-        <nav className="footer-grid">
+        <nav className="footer__grid">
           <ul>
             {links[0].map((link, idx) => (
               <li key={idx}>{link}</li>

@@ -6,20 +6,20 @@
   position: relative;
 }
 
-.banner-contents {
+.banner__contents {
   height: 190px;
   margin-left: 30px;
   padding-top: 140px;
 }
 
-.banner-title {
+.banner__title {
   font-size: 3rem;
   font-weight: 800;
   line-height: 1.2;
   padding-bottom: 1rem;
 }
 
-.banner-description {
+.banner__description {
   font-size: 0.9rem;
   height: 80px;
   line-height: 1.3;
@@ -28,7 +28,7 @@
   width: 45rem;
 }
 
-.banner--fadeBottom {
+.banner__fadeBottom {
   height: 7.4rem;
   background-image: linear-gradient(
     180deg,
@@ -39,7 +39,7 @@
   transform: translateY(0.5rem);
 }
 
-.banner-btn {
+.banner__btn {
   background-color: rgba(51, 51, 51, 0.6);
   border: none;
   border-radius: 2px;
@@ -51,24 +51,24 @@
   outline: none;
 }
 
-.banner-btn:first-of-type {
+.banner__btn:first-of-type {
   background-color: #e6e6e6;
   color: #000;
 }
 
-.banner-btn:hover {
+.banner__btn:hover {
   background-color: #e6e6e6;
   color: #000;
   transition: all 0.2s;
 }
 
 @media screen and (max-width: 768px) {
-  .banner-title {
+  .banner__title {
     font-size: 2.5rem;
     padding-right: 0.3rem;
   }
 
-  .banner-description {
+  .banner__description {
     max-width: 300px;
   }
 }

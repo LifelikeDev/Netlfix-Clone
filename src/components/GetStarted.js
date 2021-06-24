@@ -4,15 +4,21 @@ import { AiOutlineRight } from "react-icons/ai";
 const GetStarted = ({ handleSignIn }) => {
   return (
     <div>
-      <h1 className="main-text">Unlimited movies, TV shows, and more.</h1>
-      <h2 className="sub-text">Watch anywhere. Cancel anytime.</h2>
-      <h3 className="cta__sub-text">
+      <h1 className="getStarted__main-text">
+        Unlimited movies, TV shows, and more.
+      </h1>
+      <h2 className="getStarted__sub-text">Watch anywhere. Cancel anytime.</h2>
+      <h3 className="getStarted__cta-text">
         Ready to watch? Enter your email to create or restart your membership.
       </h3>
 
-      <form className="cta-form">
-        <input type="text" className="email" placeholder="Email address" />
-        <button className="cta-started" onClick={handleSignIn}>
+      <form className="getStarted__cta-form">
+        <input
+          type="text"
+          className="getStarted__email"
+          placeholder="Email address"
+        />
+        <button className="getStarted__cta-btn" onClick={handleSignIn}>
           Get Started <AiOutlineRight className="arrow-right" />
         </button>
       </form>

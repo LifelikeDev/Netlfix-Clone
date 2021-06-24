@@ -3,18 +3,18 @@
   margin-left: 20px;
 }
 
-.poster_wrapper {
+.poster__wrapper {
   display: flex;
   overflow-y: hidden;
   overflow-x: scroll;
   padding: 20px;
 }
 
-.poster_wrapper::-webkit-scrollbar {
+.poster__wrapper::-webkit-scrollbar {
   display: none;
 }
 
-.movie-poster {
+.movie__poster {
   cursor: pointer;
   max-height: 150px;
   margin-right: 10px;
@@ -23,25 +23,25 @@
   width: 100%;
 }
 
-.movie-poster:hover {
+.movie__poster:hover {
   transform: scale(1.08);
   opacity: 1;
 }
 
-.movie-poster.large {
+.movie__poster.large {
   max-height: 300px;
 }
 
-.movie-poster.large:hover {
+.movie__poster.large:hover {
   opacity: 1;
   transform: scale(1.09);
 }
 
 @media screen and (max-width: 768px) {
-  .movie-poster:hover,
-  .movie-poster:active,
-  .movie-poster.large:hover,
-  .movie-poster.large:active {
+  .movie__poster:hover,
+  .movie__poster:active,
+  .movie__poster.large:hover,
+  .movie__poster.large:active {
     transform: none;
   }
 }

@@ -5,7 +5,7 @@ import Footer from "./components/Footer";
 import { login, logout, selectUser } from "./features/userSlice";
 import { auth } from "./firebase";
 import HomeScreen from "./screens/HomeScreen";
-import LoginScreen from "./screens/LoginScreen";
+import LandingScreen from "./screens/LandingScreen";
 import ProfileScreen from "./screens/ProfileScreen";
 
 function App() {
@@ -37,7 +37,7 @@ function App() {
     <div className="app">
       <Router>
         {!user ? (
-          <LoginScreen />
+          <LandingScreen />
         ) : (
           <Switch>
             <Route path="/profile">

@@ -4,6 +4,7 @@ import "./Nav.css";
 
 const Nav = ({ scrollHeight }) => {
   const [animateNav, setAnimateNav] = useState(false);
+  const [showProfile, setShowProfile] = useState(false);
   const history = useHistory();
 
   // handle navbar animation
@@ -12,6 +13,16 @@ const Nav = ({ scrollHeight }) => {
       setAnimateNav(true);
     } else {
       setAnimateNav(false);
+    }
+  };
+
+  const toggleUserProfile = () => {
+    setShowProfile(!showProfile);
+
+    if (showProfile) {
+      history.push("/profile");
+    } else {
+      history.push("/");
     }
   };
 
@@ -36,7 +47,7 @@ const Nav = ({ scrollHeight }) => {
           src="/images/nav-avatar.png"
           alt="user avatar"
           className="nav-avatar"
-          onClick={() => history.push("/profile")}
+          onClick={toggleUserProfile}
         />
       </div>
     </nav>

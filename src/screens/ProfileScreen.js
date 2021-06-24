@@ -4,34 +4,44 @@ import Nav from "../components/Nav";
 import "./ProfileScreen.css";
 import { auth } from "../firebase";
 import IndividualPlan from "../components/IndividualPlan";
+// import { useHistory } from "react-router";
 
 const ProfileScreen = () => {
   const user = useSelector(selectUser);
+  // const history = useHistory();
+
+  const signUserOut = () => {
+    auth.signOut();
+
+    // history.push("/");
+  };
 
   return (
     <section className="profileScreen">
       <Nav scrollHeight={50} />
 
-      <div className="profileScreen-body">
+      <div className="profileScreen__body">
         <h2>Edit Profile</h2>
-        <div className="user-information">
+        <div className="profileScreen__user-information">
           <img src="/images/nav-avatar.png" alt="user profile" />
 
-          <div className="details">
-            <h3 className="user-email">{user.email}</h3>
+          <div className="profileScreen__details">
+            <h3 className="profileScreen__user-email">{user.email}</h3>
 
-            <div className="plans">
-              <h3 className="user-plan">Plans</h3>
+            <div className="profileScreen__plans">
+              <h3 className="profileScreen__user-plan">Plans</h3>
 
-              <p className="renewal-date">Renewal date: 23/06/22</p>
+              <p className="profileScreen__renewal-date">
+                Renewal date: 23/06/22
+              </p>
 
-              <div className="individual-plans">
+              <div className="profileScreen__individual-plans">
                 <IndividualPlan name="Netflix Standard" quality="1080p" />
                 <IndividualPlan name="Netflix Basic" quality="480p" />
                 <IndividualPlan name="Netflix Premium" quality="4K + HDR" />
               </div>
 
-              <button className="user-signOut" onClick={() => auth.signOut()}>
+              <button className="user-signOut" onClick={signUserOut}>
                 Sign Out
               </button>
             </div>

@@ -23,7 +23,7 @@ const EachRow = ({ title, fetchURL, isLargeRow = false }) => {
     <article className="row">
       <p>{title}</p>
 
-      <div className="poster_wrapper">
+      <div className="poster__wrapper">
         {movies.map(
           (movie) =>
             ((isLargeRow && movie.poster_path) ||
@@ -34,7 +34,7 @@ const EachRow = ({ title, fetchURL, isLargeRow = false }) => {
                   isLargeRow ? movie.poster_path : movie.backdrop_path
                 }`}
                 alt={movie.name}
-                className={`movie-poster ${isLargeRow && "large"}`}
+                className={`movie__poster ${isLargeRow && "large"}`}
               />
             )
         )}

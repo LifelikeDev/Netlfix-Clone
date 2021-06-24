@@ -7,21 +7,13 @@
   top: 0;
   left: 0;
   right: 0;
-  transition: all 0.5s ease-in;
+  transition: all 0.2s ease-in;
   width: 100%;
   z-index: 1;
 }
 
 .nav__black {
   background-color: hsl(0, 0%, 10%);
-}
-
-.nav-contents {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  outline: 1px solid lightgreen;
 }
 
 .nav-logo {
@@ -34,6 +26,6 @@
 .nav-avatar {
   cursor: pointer;
   height: 2.25rem;
-  padding-right: 1.25rem;
+  padding-right: 1.8rem;
   width: 2.4rem;
 }

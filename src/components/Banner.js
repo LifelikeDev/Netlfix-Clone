@@ -35,20 +35,20 @@ const Banner = () => {
         backgroundColor: "rgba(34, 34, 34, 0.7)",
       }}
     >
-      <div className="banner-contents">
-        <h1 className="banner-title">
+      <div className="banner__contents">
+        <h1 className="banner__title">
           {movie?.title || movie?.name || movie?.original_name}
         </h1>
-        <div className="banner-buttons">
-          <button className="banner-btn">Play</button>
-          <button className="banner-btn">My List</button>
+        <div className="banner__buttons">
+          <button className="banner__btn">Play</button>
+          <button className="banner__btn">My List</button>
         </div>
-        <h2 className="banner-description">
+        <h2 className="banner__description">
           {truncText(movie?.overview, 151)}
         </h2>
       </div>
 
-      <div className="banner--fadeBottom" />
+      <div className="banner__fadeBottom" />
     </header>
   );
 };
