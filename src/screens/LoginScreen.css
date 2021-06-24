@@ -15,14 +15,21 @@
   position: relative;
 }
 
+.loginScreen-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 1;
+  position: relative;
+}
+
 .nav-logo {
-  /* position: fixed;
+  position: absolute;
   top: 1.38rem;
-  left: 0; */
+  left: 0;
   object-fit: contain;
   margin-left: 1%;
   width: 9.4rem;
-  z-index: 1;
 }
 
 .signIn-btn {
@@ -35,11 +42,9 @@
   font-weight: 500;
   outline: none;
   padding: 9px 16px;
-  /* position: fixed;
-  right: 0;
+  position: absolute;
   top: 1.56rem;
-  right: 1.56rem; */
-  z-index: 1;
+  right: 1.56rem;
 }
 
 .signIn-btn:hover {
