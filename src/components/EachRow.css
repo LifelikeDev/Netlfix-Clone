@@ -14,27 +14,74 @@
   display: none;
 }
 
-.movie__poster {
-  cursor: pointer;
-  max-height: 150px;
+/* .each__movie {
+  /* height: 100%; */
+/* box-sizing: border-box; */
+/* position: relative;
   margin-right: 10px;
-  object-fit: contain;
-  transition: transform 0.35s;
-  width: 100%;
+  cursor: pointer;
+  transition: transform 0.15s;
+} */
+
+/*.movie__poster {
+  height: 100%;
+  object-fit: contain; */
+/* max-height: 150px; */
+/* width: 100%; */
+/* width: 200px;
+} */
+
+.each__movie {
+  cursor: pointer;
+  position: relative;
+  transition: transform 0.15s;
+  margin-right: 0.625rem;
 }
 
-.movie__poster:hover {
+.movie__poster {
+  height: 100%;
+  object-fit: contain;
+  width: 100%;
+  width: 12.5rem;
+}
+
+.each__movie:hover {
   transform: scale(1.08);
   opacity: 1;
 }
 
-.movie__poster.large {
-  max-height: 300px;
+.each__movie:hover .hover__description {
+  display: flex;
 }
 
-.movie__poster.large:hover {
-  opacity: 1;
-  transform: scale(1.09);
+.movie__poster.large {
+  height: 100%;
+  max-height: 350px;
+}
+
+.hover__description {
+  display: none;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  background-color: rgba(0, 0, 0, 0.6);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 0 0.25rem;
+  /* padding: 0;
+  margin: 0; */
+}
+
+.hover__description h6 {
+  font-size: 13px;
+  margin-bottom: 0.31rem;
+}
+
+.hover__description p {
+  font-size: 11px;
 }
 
 @media screen and (max-width: 768px) {

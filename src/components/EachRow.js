@@ -10,7 +10,7 @@ const EachRow = ({ title, fetchURL, isLargeRow = false }) => {
     const fetchMovies = async () => {
       const movieRequest = await axios.get(fetchURL);
       setMovies(movieRequest.data.results);
-
+      // console.log(movieRequest);
       return movieRequest;
     };
 
@@ -28,14 +28,19 @@ const EachRow = ({ title, fetchURL, isLargeRow = false }) => {
           (movie) =>
             ((isLargeRow && movie.poster_path) ||
               (!isLargeRow && movie.backdrop_path)) && (
-              <img
-                key={movie.id}
-                src={`${baseURL}${
-                  isLargeRow ? movie.poster_path : movie.backdrop_path
-                }`}
-                alt={movie.name}
-                className={`movie__poster ${isLargeRow && "large"}`}
-              />
+              <div key={movie.id} className="each__movie">
+                <img
+                  src={`${baseURL}${
+                    isLargeRow ? movie.poster_path : movie.backdrop_path
+                  }`}
+                  alt={movie.name}
+                  className={`movie__poster ${isLargeRow && "large"}`}
+                />
+                <div className="hover__description">
+                  <h6>{movie.title || movie.name}</h6>
+                  <p>{`${movie.overview.trim().substring(0, 65)}...`}</p>
+                </div>
+              </div>
             )
         )}
       </div>
