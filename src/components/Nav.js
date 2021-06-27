@@ -7,15 +7,6 @@ const Nav = ({ scrollHeight }) => {
   const [showProfile, setShowProfile] = useState(false);
   const history = useHistory();
 
-  // handle navbar animation
-  const handleNavAnimation = () => {
-    if (window.scrollY > scrollHeight) {
-      setAnimateNav(true);
-    } else {
-      setAnimateNav(false);
-    }
-  };
-
   const toggleUserProfile = () => {
     setShowProfile(!showProfile);
 
@@ -27,9 +18,19 @@ const Nav = ({ scrollHeight }) => {
   };
 
   useEffect(() => {
+    // handle navbar animation
+    const handleNavAnimation = () => {
+      if (window.scrollY > scrollHeight) {
+        setAnimateNav(true);
+      } else {
+        setAnimateNav(false);
+      }
+    };
+
     window.addEventListener("scroll", handleNavAnimation);
+
     return () => window.addEventListener("scroll", handleNavAnimation);
-  }, []);
+  }, [scrollHeight]);
 
   return (
     <nav className={`nav ${animateNav && "nav__black"}`}>
