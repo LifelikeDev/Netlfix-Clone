@@ -17,9 +17,8 @@ const LandingScreen = () => {
   return (
     <header className="landingScreen">
       <div className="landingScreen__nav">
-        <div>
+        <div className="nav-logo">
           <img
-            className="nav-logo"
             src="/images/netflix-logo-2.png"
             alt="netflix"
             onClick={() => history.push("/")}

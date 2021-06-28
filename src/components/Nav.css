@@ -1,8 +1,9 @@
 .nav {
   display: flex;
+  align-items: center;
   justify-content: space-between;
   height: 50px;
-  padding: 20px 0 10px;
+  padding: 15px 0 10px;
   position: fixed;
   top: 0;
   left: 0;
@@ -16,16 +17,27 @@
   background-color: hsl(0, 0%, 10%);
 }
 
-.nav-logo {
+.home__nav-logo {
   cursor: pointer;
   object-fit: contain;
-  transform: translateY(-24px);
+  transform: translateY(-4px);
+  margin-left: 1rem;
   width: 7.5rem;
 }
 
-.nav-avatar {
+.home__nav-logo img {
+  width: 100%;
+}
+
+.home__nav-avatar {
   cursor: pointer;
   height: 2.25rem;
-  padding-right: 1.8rem;
+  margin-right: 1.8rem;
   width: 2.4rem;
+}
+
+@media screen and (max-width: 550px) {
+  .home__nav-avatar {
+    margin-right: 1rem;
+  }
 }

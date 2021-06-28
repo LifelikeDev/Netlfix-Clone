@@ -34,11 +34,10 @@ const Nav = ({ scrollHeight }) => {
 
   return (
     <nav className={`nav ${animateNav && "nav__black"}`}>
-      <div>
+      <div className="home__nav-logo">
         <img
           src="images/netflix-logo.png"
           alt="netflix logo"
-          className="nav-logo"
           onClick={() => history.push("/")}
         />
       </div>
@@ -47,7 +46,7 @@ const Nav = ({ scrollHeight }) => {
         <img
           src="/images/nav-avatar.png"
           alt="user avatar"
-          className="nav-avatar"
+          className="home__nav-avatar"
           onClick={toggleUserProfile}
         />
       </div>

@@ -25,11 +25,15 @@
 
 .nav-logo {
   position: absolute;
-  top: 1.38rem;
+  top: 0;
   left: 0;
   object-fit: contain;
   margin-left: 1%;
-  width: 9.4rem;
+  width: 8.6rem;
+}
+
+.nav-logo img {
+  width: 100%;
 }
 
 .landingScreen__signIn-btn {
@@ -108,7 +112,6 @@
 
 @media screen and (max-width: 550px) {
   .nav-logo {
-    top: 1.75rem;
     width: 8rem;
   }
 
