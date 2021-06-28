@@ -7,6 +7,7 @@
 .footer {
   margin: 0 auto;
   width: 65%;
+
   /* outline: 1px solid yellow; */
 }
 
@@ -22,6 +23,8 @@
   grid-template-areas: "list1 list2 list3 list4";
   margin-bottom: 1.8rem;
   gap: 0.8rem;
+
+  /* outline: 1px solid red; */
 }
 
 .footer__grid ul {
@@ -61,17 +64,26 @@
 }
 
 @media screen and (max-width: 550px) {
+  .footer {
+    width: 85%;
+  }
+
   .footer__grid {
     grid-template-areas:
       "list1 list3"
       "list2 list4";
-    column-gap: 3rem;
+  }
+
+  .footer__grid > ul:first-of-type,
+  .footer__grid > ul:nth-of-type(2) {
+    margin-right: 4rem;
   }
 
   .footer__grid li {
     word-break: keep-all;
-    width: 8rem;
+    width: 7rem;
   }
+
   .footer__grid ul > li:last-of-type {
     margin-bottom: 0;
   }

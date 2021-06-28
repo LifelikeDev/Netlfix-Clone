@@ -73,7 +73,7 @@
   color: var(--white);
   z-index: 1;
   position: absolute;
-  top: 230px;
+  top: 14.38rem;
   width: 100%;
 }
 
@@ -88,10 +88,19 @@
   padding: 0 8.2rem;
 }
 
-@media screen and (max-width: 769px) {
-  .landingScreen__body {
-    top: 10.45rem;
+@media screen and (min-height: 800px) {
+  .landingScreen,
+  .landingScreen::after {
+    height: 80vh;
   }
+
+  .landingScreen__body,
+  .landingScreen__body.signIn {
+    top: 30%;
+  }
+}
+
+@media screen and (max-width: 769px) {
   .landingScreen__body > * {
     padding: 0 2.9rem;
   }
@@ -101,6 +110,14 @@
   .nav-logo {
     top: 1.75rem;
     width: 8rem;
+  }
+
+  .landingScreen__signIn-btn {
+    right: 1.2rem;
+  }
+
+  .landingScreen__body {
+    top: 10.45rem;
   }
 
   .landingScreen__signIn-btn {
