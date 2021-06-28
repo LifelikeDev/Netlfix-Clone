@@ -4,6 +4,8 @@ This is a personal build/clone of netflix.com. This build is primarily focused o
 
 The app also has user sign in/sign out and user sign up functionality with authentication from Firebase Auth. Just as it is with the original app, no user can view the movie list unless they are signed in with their email account and a password. The app is hosted on Firebase using the Firebase's hosting.
 
+Find the app hosted [here](https://netflix-clone-lld.web.app)
+
 <hr>
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) template.
