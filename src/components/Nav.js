@@ -8,7 +8,7 @@ const Nav = ({ scrollHeight }) => {
   const history = useHistory();
 
   const toggleUserProfile = () => {
-    setShowProfile(!showProfile);
+    setShowProfile((prevState) => !prevState);
 
     if (showProfile) {
       history.push("/profile");
